@@ -20,6 +20,7 @@
 [![][github-stars-shield]][github-stars-link]
 [![][github-issues-shield]][github-issues-link]
 [![][github-action-shield]][github-action-link]
+<br/>
 [![][idea-plugin-rate-shield]][idea-plugin-link]
 [![][idea-plugin-download-shield]][idea-plugin-link]
 [![][idea-plugin-version-shield]][idea-plugin-link]
