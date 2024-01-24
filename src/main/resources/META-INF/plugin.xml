@@ -1,0 +1,97 @@
+<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
+<idea-plugin>
+    <!-- Unique identifier of the plugin. It should be FQN. It cannot be changed between the plugin versions. -->
+    <id>com.github.connectai_e.kimi-commits-interllij</id>
+
+    <!-- Public plugin name should be written in Title Case.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-name -->
+    <name>Kimi Commits</name>
+
+    <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
+    <vendor email="" url="https://github.com/ConnectAI-E">connectai-e</vendor>
+
+    <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
+         Simple HTML elements (text formatting, paragraphs, and lists) can be added inside of <![CDATA[ ]]> tag.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
+    <description><![CDATA[
+    <p>Kimi Commits is a cutting-edge plugin designed to effortlessly generate your git commit messages by harnessing the power of Kimi AI.</p>
+    <h3>Key Features</h3>
+    <ul>
+        <li>Effortlessly generate commit messages from the diff using the advanced Kimi API</li>
+        <li>Compute the diff exclusively from the selected files and lines within the commit dialog</li>
+        <li>Create a personalized prompt for the seamless generation of commit messages</li>
+        <li>Choose from a variety of models provided by the versatile Kimi API</li>
+        <li>Configure the Kimi network proxy according to your preferences</li>
+        <li>Specify a custom Kimi-compatible API endpoint for enhanced flexibility</li>
+    </ul>
+    <h3>Usage Guidelines</h3>
+    <p>To embark on this journey, install the plugin and configure it by setting up your Kimi API token in the plugin's settings:
+    <br/>
+    Settings > Tools > Kimi Commits</p>
+    <h3>Troubleshooting</h3>
+    <p>We eagerly await your feedback in case you encounter any issues or have feature requests. Please report them
+    <a href="https://github.com/ConnectAI-E/kimi-commits-intellij/issues">here</a>.</p>
+]]></description>
+
+    <!-- Product and plugin compatibility requirements.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
+    <depends>com.intellij.modules.platform</depends>
+    <depends>Git4Idea</depends>
+
+    <applicationListeners>
+
+    </applicationListeners>
+
+    <projectListeners>
+
+    </projectListeners>
+
+    <resource-bundle>messages.MyBundle</resource-bundle>
+
+    <!-- Extension points defined by the plugin.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
+    <extensions defaultExtensionNs="com.intellij">
+        <applicationService serviceImplementation="com.github.connectai_e.kimi.commits.intellij.settings.AppSettings"/>
+
+
+        <applicationConfigurable
+                parentId="tools"
+                instance="com.github.connectai_e.kimi.commits.intellij.settings.AppSettingsConfigurable"
+                key="name"
+        />
+
+        <projectConfigurable
+                parentId="com.github.connectai_e.kimi.commits.intellij.settings.AppSettingsConfigurable"
+                instance="com.github.connectai_e.kimi.commits.intellij.settings.ExclusionsConfigurable"
+                id="com.github.connectai_e.kimi.commits.intellij.settings.ExclusionsConfigurable"
+                key="settings.exclusions.group.title"
+        />
+
+        <notificationGroup
+                id="ai.commits.notification.general"
+                displayType="BALLOON"
+                key="notification.group.general.name"
+        />
+        <notificationGroup
+                id="ai.commits.notification.important"
+                displayType="STICKY_BALLOON"
+                key="notification.group.important.name"
+        />
+        <postStartupActivity
+                implementation="com.github.connectai_e.kimi.commits.intellij.listeners.ApplicationStartupListener"
+        />
+
+    </extensions>
+
+    <actions>
+        <action
+                id="AICommit.Button"
+                text="kimi commits"
+                description="Create commit message with kimi"
+                icon="/icons/kimi-commit-logos.svg"
+                class="com.github.connectai_e.kimi.commits.intellij.AICommitAction">
+            <add-to-group group-id="Vcs.MessageActionGroup" anchor="last"/>
+        </action>
+    </actions>
+
+</idea-plugin>
