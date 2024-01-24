@@ -28,7 +28,7 @@
 </div>
 
 <p align="center">
-    <a href="https://gitmaya.com">🖥 Try Kimi Commits Now </a>
+    <a href="https://plugins.jetbrains.com/plugin/23629-kimi-commits">🖥 Try Kimi Commits Now </a>
 </p>
 
 
