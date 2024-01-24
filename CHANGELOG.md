@@ -1,5 +1,5 @@
-<!-- Keep a Changelog guide -> https://keepachangelog.com -->
+# Changelog
 
-#  Changelog
+## [Unreleased]
 
-## Unreleased
+[Unreleased]: https://github.com/ConnectAI-E/kimi-commits-intellij/commits
