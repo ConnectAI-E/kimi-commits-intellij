@@ -1,0 +1,34 @@
+package com.github.connectai_e.kimi.commits.intellij.settings
+
+import com.github.connectai_e.kimi.commits.intellij.AICommitsUtils
+import com.intellij.openapi.components.PersistentStateComponent
+import com.intellij.openapi.components.Service
+import com.intellij.openapi.components.State
+import com.intellij.openapi.components.Storage
+import com.intellij.util.xmlb.XmlSerializerUtil
+
+@State(
+        name = ProjectSettings.SERVICE_NAME,
+        storages = [Storage("AICommit.xml")]
+)
+@Service(Service.Level.PROJECT)
+class ProjectSettings : PersistentStateComponent<ProjectSettings?> {
+
+    companion object {
+        const val SERVICE_NAME = "com.github.connectai_e.kimi.commits.intellij.settings.ProjectSettings"
+    }
+
+    var projectExclusions: Set<String> = setOf()
+
+    override fun getState() = this
+
+    override fun loadState(state: ProjectSettings) {
+        XmlSerializerUtil.copyBean(state, this)
+    }
+
+    fun isPathExcluded(path: String): Boolean {
+        return AICommitsUtils.matchesGlobs(path, projectExclusions)
+    }
+
+
+}
