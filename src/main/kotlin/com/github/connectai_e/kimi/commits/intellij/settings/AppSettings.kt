@@ -117,37 +117,29 @@ class AppSettings : PersistentStateComponent<AppSettings> {
                     <type>[optional scope]: <description>
                     [optional body]
                     [optional footer(s)]
-
-                    example answer1:
+                    
+                    right msg1:
                     docs: correct spelling of CHANGELOG
-                    example answer2:
+                    right msg2:
                     feat(lang): add polish language
-                    example answer3:
+                    right msg3:
                     fix: prevent racing of requests
-
-                    Introduce a request id and a reference to latest request. Dismiss
-                    incoming responses other than from latest request.
-
-                    Remove timeouts which were used to mitigate the racing issue but are
-                    obsolete now.
-
-                    Reviewed-by: Z
-                    Refs: #123
-
-                    example answer4:
+                    right msg4:
                     feat(api)!: send an email to the customer when a product is shipped
-
-                     I'll send you an output of 'git diff --staged' command, and you convert it into a commit message.
-
+                    wrong msg1:
+                    Add .idea config files and a new document (main)
+                     
+                    I'll send you an output of 'git diff --staged' command, and you convert it into a commit message.
                     remember these：
                     - Lines must not be longer than 74 characters.
                     - Use {locale} language to answer.
                     - End commit title with issue number if you can get it from the branch name: {branch} in parenthesis.
-
+                      
+               
                     diff detail is below：
 
                     {diff}
-                    git msg:
+                    give me git msg:
                 """.trimIndent(),
                 false
         ),

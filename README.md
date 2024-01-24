@@ -13,7 +13,6 @@
  <samp>Supports IDEA, WebStorm, PyCharm and so on <sup><em>(FULL OPENSOURCE)</em></sup></samp>
 </p>
 
-
 </div>
 
 <p align="center">
