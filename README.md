@@ -8,10 +8,21 @@
   </picture>
 </a>
 <p align='center'>
-  <samp>Kimi writes your git commit messages</samp>
+  <samp>Let kimi-ai writes your git commit messages</samp>
 <br/>
- <samp>Supports IDEA, WebStorm, PyCharm and so on <sup><em>(FULL OPENSOURCE)</em></sup></samp>
+ <samp>Supports idea, webstorm, pycharm and so on <sup><em>(FULL OPENSOURCE)</em></sup></samp>
 </p>
+
+<!-- SHIELD GROUP -->
+[![][github-logo-shield]][github-logo-link]
+[![][github-contributors-shield]][github-contributors-link]
+[![][github-forks-shield]][github-forks-link]
+[![][github-stars-shield]][github-stars-link]
+[![][github-issues-shield]][github-issues-link]
+[![][github-action-shield]][github-action-link]
+[![][idea-plugin-rate-shield]][idea-plugin-link]
+[![][idea-plugin-download-shield]][idea-plugin-link]
+[![][idea-plugin-version-shield]][idea-plugin-link]
 
 </div>
 
@@ -19,4 +30,21 @@
     <a href="https://gitmaya.com">🖥 Try Kimi Commits Now </a>
 </p>
 
-## Feature
+
+<!-- LINK GROUP -->
+[github-logo-shield]: https://img.shields.io/badge/kimi_commits-enabled?style=flat-square&logo=github&color=F9DC4E&logoColor=D9E0EE&labelColor=302D41
+[github-logo-link]: https://github.com/connectai-e/kimi-commits-intellij
+[github-contributors-link]: https://github.com/connectai-e/kimi-commits-intellij/graphs/contributors
+[github-contributors-shield]: https://img.shields.io/github/contributors/connectai-e/kimi-commits-intellij?color=c4f042&labelColor=black&style=flat-square
+[github-forks-link]: https://github.com/connectai-e/kimi-commits-intellij/network/members
+[github-forks-shield]: https://img.shields.io/github/forks/connectai-e/kimi-commits-intellij?color=8ae8ff&labelColor=black&style=flat-square
+[github-issues-link]: https://github.com/connectai-e/kimi-commits-intellij/issues
+[github-issues-shield]: https://img.shields.io/github/issues/connectai-e/kimi-commits-intellij?color=ff80eb&labelColor=black&style=flat-square
+[github-stars-link]: https://github.com/connectai-e/kimi-commits-intellij/network/stargazers
+[github-stars-shield]: https://img.shields.io/github/stars/connectai-e/kimi-commits-intellij?color=ffcb47&labelColor=black&style=flat-square
+[github-action-shield]:https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Fconnectai-e%2Fkimi-commits-intellij%2Fbadge%3Fref%3Dmain&style=flat-square
+[github-action-link]:https://actions-badge.atrox.dev/connectai-e/kimi-commits-intellij/goto?ref=main
+[idea-plugin-rate-shield]:https://img.shields.io/jetbrains/plugin/r/rating/23629?color=ffcb47&labelColor=black&style=flat-square
+[idea-plugin-download-shield]:https://img.shields.io/jetbrains/plugin/d/23629?color=ffcb47&labelColor=black&style=flat-square
+[idea-plugin-version-shield]:https://img.shields.io/jetbrains/plugin/v/23629?color=ffcb47&labelColor=black&style=flat-square
+[idea-plugin-link]:https://plugins.jetbrains.com/plugin/23629-kimi-commits
