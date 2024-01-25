@@ -25,12 +25,16 @@
 [![][idea-plugin-download-shield]][idea-plugin-link]
 [![][idea-plugin-version-shield]][idea-plugin-link]
 
-</div>
+
 
 <p align="center">
     <a href="https://plugins.jetbrains.com/plugin/23629-kimi-commits">🖥 Try Kimi Commits Now </a>
 </p>
 
+![613shots_so](https://github.com/ConnectAI-E/kimi-commits-intellij/assets/50035229/bfcc1b12-ce21-4715-a854-95bbed3daeb1)
+![268shots_so](https://github.com/ConnectAI-E/kimi-commits-intellij/assets/50035229/4d0bf872-d881-4524-a445-d42bf7d023b2)
+
+</div>
 
 <!-- LINK GROUP -->
 [github-logo-shield]: https://img.shields.io/badge/kimi_commits-enabled?style=flat-square&logo=github&color=F9DC4E&logoColor=D9E0EE&labelColor=302D41
