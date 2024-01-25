@@ -85,7 +85,7 @@
 
     <actions>
         <action
-                id="AICommit.Button"
+                id="KimiCommits.Button"
                 text="kimi commits"
                 description="Create commit message with kimi"
                 icon="/icons/kimi-commit-logos.svg"
