@@ -45,7 +45,7 @@ class AppSettings : PersistentStateComponent<AppSettings> {
 
     var openAIModelId = "moonshot-v1-8k"
     var openAIModelIds = listOf("moonshot-v1-8k", "moonshot-v1-32k", "moonshot-v1-128k")
-    var openAITemperature = "0.7"
+    var openAITemperature = "0.3"
 
     var appExclusions: Set<String> = setOf()
 
