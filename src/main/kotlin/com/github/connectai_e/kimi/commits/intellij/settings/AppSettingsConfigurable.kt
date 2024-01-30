@@ -13,6 +13,7 @@ import com.intellij.openapi.ui.ComboBox
 import com.intellij.openapi.ui.naturalSorted
 import com.intellij.ui.CommonActionsPanel
 import com.intellij.ui.ToolbarDecorator
+import com.intellij.ui.components.JBCheckBox
 import com.intellij.ui.components.JBLabel
 import com.intellij.ui.components.JBPasswordField
 import com.intellij.ui.components.JBTextField
@@ -29,6 +30,7 @@ class AppSettingsConfigurable : BoundConfigurable(message("settings.general.grou
     private val tokenPasswordField = JBPasswordField()
     private val verifyLabel = JBLabel()
     private val proxyTextField = JBTextField()
+    private var consistencyCheckBox = JBCheckBox( message("settings.consistency"))
     private val socketTimeoutTextField = JBTextField()
     private var modelComboBox = ComboBox<String>()
     private val promptTable = PromptTable()
@@ -61,6 +63,7 @@ class AppSettingsConfigurable : BoundConfigurable(message("settings.general.grou
                     .resizableColumn()
                     .widthGroup("input")
             }
+
             row {
                 comment(message("settings.openAIProxyComment"))
             }
@@ -123,6 +126,9 @@ class AppSettingsConfigurable : BoundConfigurable(message("settings.general.grou
                     .widthGroup("button")
             }
 
+
+
+
             row {
                 label(message("settings.openAITemperature"))
                     .widthGroup("label")
@@ -141,6 +147,8 @@ class AppSettingsConfigurable : BoundConfigurable(message("settings.general.grou
                 cell(verifyLabel)
                     .align(AlignX.RIGHT)
             }
+
+
         }
 
         group(JBLabel("Prompt")) {
@@ -193,9 +201,20 @@ class AppSettingsConfigurable : BoundConfigurable(message("settings.general.grou
             }.resizableRow()
         }.resizableRow()
 
-        row {
-            browserLink(message("settings.report-bug"), AICommitsBundle.URL_BUG_REPORT.toString())
-        }
+        group(JBLabel("Other")){
+            row {
+                cell(consistencyCheckBox)
+                    .bindSelected(AppSettings.instance::msgConsistency)
+                    .widthGroup("input")
+
+            }
+
+            row {
+                browserLink(message("settings.report-bug"), AICommitsBundle.URL_BUG_REPORT.toString())
+            }.resizableRow()
+        }.resizableRow()
+
+
     }
 
     private fun updateActionAvailability(action: CommonActionsPanel.Buttons) {

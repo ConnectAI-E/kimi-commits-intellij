@@ -39,7 +39,7 @@ class PromptTable {
         setSelectionMode(SINGLE_SELECTION)
 
         columnModel.getColumn(0).preferredWidth = 150
-        columnModel.getColumn(0).maxWidth = 250
+        columnModel.getColumn(0).maxWidth = 120
 
         addMouseListener(object : MouseAdapter() {
             override fun mouseClicked(e: MouseEvent?) {

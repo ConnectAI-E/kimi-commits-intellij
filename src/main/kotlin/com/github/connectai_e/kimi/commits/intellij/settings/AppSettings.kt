@@ -39,6 +39,7 @@ class AppSettings : PersistentStateComponent<AppSettings> {
     var openAIHosts = mutableSetOf("https://api.moonshot.cn/v1/", OpenAIHost.OpenAI.baseUrl)
     var openAISocketTimeout = "30"
     var proxyUrl: String? = null
+    var msgConsistency = true
 
     var prompts = initPrompts()
     var currentPrompt = prompts["conventional"]!!
