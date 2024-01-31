@@ -38,6 +38,13 @@
 </div>
 
 
+## 项目功能
+ - 学习历史提交记录，自动预测下一次提交的信息
+ - 根据标准的conventional commit规范，自动生成提交信息
+ - 自定义其他commit风格，比如emoji风格
+
+
+
 
 <!-- LINK GROUP -->
 [github-logo-shield]: https://img.shields.io/badge/kimi_commits-enabled?style=flat-square&logo=github&color=F9DC4E&logoColor=D9E0EE&labelColor=302D41
