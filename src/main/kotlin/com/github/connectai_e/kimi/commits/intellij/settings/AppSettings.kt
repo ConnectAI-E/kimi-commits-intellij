@@ -39,9 +39,10 @@ class AppSettings : PersistentStateComponent<AppSettings> {
     var openAIHosts = mutableSetOf("https://api.moonshot.cn/v1/", OpenAIHost.OpenAI.baseUrl)
     var openAISocketTimeout = "30"
     var proxyUrl: String? = null
+    var msgConsistency = true
 
     var prompts = initPrompts()
-    var currentPrompt = prompts["conventional"]!!
+    var currentPrompt = prompts["conventional"] ?: prompts.values.first()
 
     var openAIModelId = "moonshot-v1-8k"
     var openAIModelIds = listOf("moonshot-v1-8k", "moonshot-v1-32k", "moonshot-v1-128k")
@@ -131,15 +132,44 @@ class AppSettings : PersistentStateComponent<AppSettings> {
                      
                     I'll send you an output of 'git diff --staged' command, and you convert it into a commit message.
                     remember these：
+                    - now branch is {branch}
                     - Lines must not be longer than 74 characters.
                     - Use {locale} language to answer.
-                    - End commit title with issue number if you can get it from the branch name: {branch} in parenthesis.
+               
                       
                
                     diff detail is below：
 
                     {diff}
                     give me git msg:
+                """.trimIndent(),false
+        ),
+        "consistent" to Prompt(
+                "Consistent",
+                "Predict commit message format based on the previous commit messages.",
+                """
+                   I'll send you an output of 'git diff --staged' command, and you convert it into a commit message.
+                   remember these：
+                   - now branch is {branch}
+                   - Determine the language to be used based on the given historical commit msg
+                   - Based on the given historical commit msg, summarize the format, specifications, tone and intonation of the msg
+                   - Imitate the language and style of historical git msg to write new git msg
+                   - Lines must not be longer than 74 characters.
+                   - Generate the appropriate git commit msg directly for me without any other unnecessary explanations
+
+
+                   historical git msg is below
+                   ------------------------
+                   {history}
+
+
+                   git diff detail is below
+                   ------------------------
+                   {diff}
+
+
+                   so, git msg content is
+                   -----------------------
                 """.trimIndent(),
                 false
         ),
