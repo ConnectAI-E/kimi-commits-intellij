@@ -30,7 +30,7 @@ class AppSettingsConfigurable : BoundConfigurable(message("settings.general.grou
     private val tokenPasswordField = JBPasswordField()
     private val verifyLabel = JBLabel()
     private val proxyTextField = JBTextField()
-    private var consistencyCheckBox = JBCheckBox( message("settings.consistency"))
+//    private var consistencyCheckBox = JBCheckBox( message("settings.consistency"))
     private val socketTimeoutTextField = JBTextField()
     private var modelComboBox = ComboBox<String>()
     private val promptTable = PromptTable()
