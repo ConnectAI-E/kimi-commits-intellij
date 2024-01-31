@@ -201,19 +201,9 @@ class AppSettingsConfigurable : BoundConfigurable(message("settings.general.grou
             }.resizableRow()
         }.resizableRow()
 
-        group(JBLabel("Other")){
-            row {
-                cell(consistencyCheckBox)
-                    .bindSelected(AppSettings.instance::msgConsistency)
-                    .widthGroup("input")
-
-            }
-
-            row {
-                browserLink(message("settings.report-bug"), AICommitsBundle.URL_BUG_REPORT.toString())
-            }.resizableRow()
+        row {
+            browserLink(message("settings.report-bug"), AICommitsBundle.URL_BUG_REPORT.toString())
         }.resizableRow()
-
 
     }
 
