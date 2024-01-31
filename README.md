@@ -33,8 +33,11 @@
 
 ![613shots_so](https://github.com/ConnectAI-E/kimi-commits-intellij/assets/50035229/bfcc1b12-ce21-4715-a854-95bbed3daeb1)
 ![268shots_so](https://github.com/ConnectAI-E/kimi-commits-intellij/assets/50035229/4d0bf872-d881-4524-a445-d42bf7d023b2)
+![456shots_so](https://github.com/ConnectAI-E/kimi-commits-intellij/assets/50035229/c69ded03-d22f-4d78-9ec5-75c15d5eec14)
 
 </div>
+
+
 
 <!-- LINK GROUP -->
 [github-logo-shield]: https://img.shields.io/badge/kimi_commits-enabled?style=flat-square&logo=github&color=F9DC4E&logoColor=D9E0EE&labelColor=302D41
@@ -53,3 +56,5 @@
 [idea-plugin-download-shield]:https://img.shields.io/jetbrains/plugin/d/23629?color=ffcb47&labelColor=black&style=flat-square
 [idea-plugin-version-shield]:https://img.shields.io/jetbrains/plugin/v/23629?color=ffcb47&labelColor=black&style=flat-square
 [idea-plugin-link]:https://plugins.jetbrains.com/plugin/23629-kimi-commits
+
+
