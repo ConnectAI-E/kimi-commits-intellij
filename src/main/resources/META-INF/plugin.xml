@@ -14,23 +14,23 @@
          Simple HTML elements (text formatting, paragraphs, and lists) can be added inside of <![CDATA[ ]]> tag.
          Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
     <description><![CDATA[
-    <p>Kimi Commits，让你在Kimi-AI的帮助下，轻松生成Git提交信息，让代码提交变得如此简单。.</p>
-    <h3>🔥【核心功能】🔥</h3>
+    <p>Kimi Commits is a plugin that helps you generate Git commit messages with the assistance of Kimi-AI, making code commits a breeze.</p>
+    <h3>[Core Features]</h3>
     <ul>
-       <li>利用Kimi API，从 git diff 中自动生成 commit 信息，省时省力</li>
-       <li>支持根据历史 Commit Msg 生成同样风格的 commit 信息</li>
-       <li>支持公司个性化配置，可自定义 git 风格提示词</li>
-       <li>在提交对话框中，仅针对选定的文件和行计算diff</li>
-       <li>根据个人喜好配置Kimi网络代理</li>
-       <li>指定自定义的Kimi兼容API端点，增强灵活性</li>
+       <li>Automatically generate commit messages from git diff using Kimi API, saving you time and effort</li>
+       <li>Support for generating commit messages in the same style as historical commits</li>
+       <li>Company-specific configuration to customize git style prompts</li>
+       <li>Calculate diff only for selected files and lines in the commit dialog</li>
+       <li>Configure Kimi network proxy according to your preferences</li>
+       <li>Specify a custom Kimi-compatible API endpoint for enhanced flexibility</li>
     </ul>
-    <h3>🚀【使用指南】🚀</h3>
-   <p>开启这段旅程，安装插件并配置它，通过在插件设置中设置你的Kimi API令牌：
-   <br/>
-   设置 > 工具 > Kimi Commits</p>
-   <h3>故障排除</h3>
-   <p>如果你遇到任何问题或有功能请求，我们热切期待你的反馈。请在这里报告：
-   <a href="https://github.com/ConnectAI-E/kimi-commits-intellij/issues">这里</a></p>
+    <h3>[Usage Guide]</h3>
+    <p>Start your journey by installing the plugin and configuring it. Set your Kimi API token in the plugin settings:
+    <br/>
+    Settings > Tools > Kimi Commits</p>
+    <h3>[Troubleshooting]</h3>
+    <p>If you encounter any issues or have feature requests, we eagerly await your feedback. Please report them here:
+    <a href="https://github.com/ConnectAI-E/kimi-commits-intellij/issues">here</a></p>
 ]]></description>
 
     <!-- Product and plugin compatibility requirements.
