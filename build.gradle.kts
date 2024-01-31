@@ -56,6 +56,7 @@ tasks {
     }
 
     patchPluginXml {
+        destinationDir.set(file("src/main/resources/META-INF"))
         version.set(properties("pluginVersion"))
         sinceBuild.set(properties("pluginSinceBuild"))
         // untilBuild.set(properties("pluginUntilBuild"))
@@ -65,8 +66,8 @@ tasks {
             with(changelog) {
                 renderItem(
                     getOrNull(properties("pluginVersion")) ?: getUnreleased()
-                        .withHeader(false)
-                        .withEmptySections(false),
+                        .withHeader( true)
+                        .withEmptySections( true),
                     Changelog.OutputType.HTML,
                 )
             }
