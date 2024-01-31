@@ -14,23 +14,23 @@
          Simple HTML elements (text formatting, paragraphs, and lists) can be added inside of <![CDATA[ ]]> tag.
          Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
     <description><![CDATA[
-    <p>Kimi Commits is a cutting-edge plugin designed to effortlessly generate your git commit messages by harnessing the power of Kimi AI.</p>
-    <h3>Key Features</h3>
+    <p>Kimi Commits，让你在Kimi-AI的帮助下，轻松生成Git提交信息，让代码提交变得如此简单。.</p>
+    <h3>🔥【核心功能】🔥</h3>
     <ul>
-        <li>Effortlessly generate commit messages from the diff using the advanced Kimi API</li>
-        <li>Compute the diff exclusively from the selected files and lines within the commit dialog</li>
-        <li>Create a personalized prompt for the seamless generation of commit messages</li>
-        <li>Choose from a variety of models provided by the versatile Kimi API</li>
-        <li>Configure the Kimi network proxy according to your preferences</li>
-        <li>Specify a custom Kimi-compatible API endpoint for enhanced flexibility</li>
+       <li>利用Kimi API，从 git diff 中自动生成 commit 信息，省时省力</li>
+       <li>支持根据历史 Commit Msg 生成同样风格的 commit 信息</li>
+       <li>支持公司个性化配置，可自定义 git 风格提示词</li>
+       <li>在提交对话框中，仅针对选定的文件和行计算diff</li>
+       <li>根据个人喜好配置Kimi网络代理</li>
+       <li>指定自定义的Kimi兼容API端点，增强灵活性</li>
     </ul>
-    <h3>Usage Guidelines</h3>
-    <p>To embark on this journey, install the plugin and configure it by setting up your Kimi API token in the plugin's settings:
-    <br/>
-    Settings > Tools > Kimi Commits</p>
-    <h3>Troubleshooting</h3>
-    <p>We eagerly await your feedback in case you encounter any issues or have feature requests. Please report them
-    <a href="https://github.com/ConnectAI-E/kimi-commits-intellij/issues">here</a>.</p>
+    <h3>🚀【使用指南】🚀</h3>
+   <p>开启这段旅程，安装插件并配置它，通过在插件设置中设置你的Kimi API令牌：
+   <br/>
+   设置 > 工具 > Kimi Commits</p>
+   <h3>故障排除</h3>
+   <p>如果你遇到任何问题或有功能请求，我们热切期待你的反馈。请在这里报告：
+   <a href="https://github.com/ConnectAI-E/kimi-commits-intellij/issues">这里</a></p>
 ]]></description>
 
     <!-- Product and plugin compatibility requirements.
