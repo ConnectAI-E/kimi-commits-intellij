@@ -190,7 +190,7 @@ class PromptTable {
         }
 
         private fun setPreview(promptContent: String) {
-            val constructPrompt = AICommitsUtils.constructPrompt(promptContent, diff, branch)
+            val constructPrompt = AICommitsUtils.constructPrompt(promptContent, diff, branch,null)
             promptPreviewTextArea.text = constructPrompt.substring(0, constructPrompt.length.coerceAtMost(10000))
             promptPreviewTextArea.caretPosition = max(0, promptContentTextArea.caretPosition - 10)
         }

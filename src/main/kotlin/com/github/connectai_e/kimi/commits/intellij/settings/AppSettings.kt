@@ -42,7 +42,7 @@ class AppSettings : PersistentStateComponent<AppSettings> {
     var msgConsistency = true
 
     var prompts = initPrompts()
-    var currentPrompt = prompts["conventional"]!!
+    var currentPrompt = prompts["conventional"] ?: prompts.values.first()
 
     var openAIModelId = "moonshot-v1-8k"
     var openAIModelIds = listOf("moonshot-v1-8k", "moonshot-v1-32k", "moonshot-v1-128k")
@@ -141,6 +141,33 @@ class AppSettings : PersistentStateComponent<AppSettings> {
 
                     {diff}
                     give me git msg:
+                """.trimIndent(),false
+        ),
+        "consistent" to Prompt(
+                "Consistent",
+                "Predict commit message format based on the previous commit messages.",
+                """
+                   I'll send you an output of 'git diff --staged' command, and you convert it into a commit message.
+                   remember these：
+                   - Determine the language to be used based on the given historical commit msg
+                   - Based on the given historical commit msg, summarize the format, specifications, tone and intonation of the msg
+                   - Imitate the language and style of historical git msg to write new git msg
+                   - Lines must not be longer than 74 characters.
+                   - Generate the appropriate git commit msg directly for me without any other unnecessary explanations
+
+
+                   historical git msg is below
+                   ------------------------
+                   {history}
+
+
+                   git diff detail is below
+                   ------------------------
+                   {diff}
+
+
+                   so, git msg content is
+                   -----------------------
                 """.trimIndent(),
                 false
         ),
