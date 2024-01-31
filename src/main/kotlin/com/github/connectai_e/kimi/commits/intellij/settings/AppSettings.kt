@@ -132,9 +132,10 @@ class AppSettings : PersistentStateComponent<AppSettings> {
                      
                     I'll send you an output of 'git diff --staged' command, and you convert it into a commit message.
                     remember these：
+                    - now branch is {branch}
                     - Lines must not be longer than 74 characters.
                     - Use {locale} language to answer.
-                    - End commit title with issue number if you can get it from the branch name: {branch} in parenthesis.
+               
                       
                
                     diff detail is below：
@@ -149,6 +150,7 @@ class AppSettings : PersistentStateComponent<AppSettings> {
                 """
                    I'll send you an output of 'git diff --staged' command, and you convert it into a commit message.
                    remember these：
+                   - now branch is {branch}
                    - Determine the language to be used based on the given historical commit msg
                    - Based on the given historical commit msg, summarize the format, specifications, tone and intonation of the msg
                    - Imitate the language and style of historical git msg to write new git msg
